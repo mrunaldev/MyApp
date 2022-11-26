@@ -49,7 +49,6 @@ func findAllReportingEmployees(manager string) string {
 	return reportees
 }
 
-// Find all employees who directly or indirectly reports to a manager
 func findEmployees() {
 	var managers []string
 	for employee, manager := range employeeToManagerMappings {
