@@ -14,38 +14,22 @@ import (
 var employeeToManagerMappings map[string]string
 
 func main() {
-
-	// construct a mapping from employee to manager
 	employeeToManagerMappings = map[string]string{"A": "A", "B": "A", "C": "B", "D": "B", "E": "D", "F": "E"}
 	findEmployees()
-
-	// // print contents of the resulting dictionary
-	// for key, value := range result
-	//     print(key, "—>", value)
 }
-
 func findAllReportingEmployees(manager string) string {
 	reportees := ""
-
 	if manager == "" {
 		reportees = ""
 	} else {
 		for emp, mgr := range employeeToManagerMappings {
 			if manager == mgr {
 				if emp != mgr {
-					reportees = reportees + findAllReportingEmployees(emp)
-				} else {
-					continue
+					reportees = reportees + emp + findAllReportingEmployees(emp)
 				}
-
 			}
 		}
-
 	}
-
-	// for _, val := range reportees {
-	// 	reportees = append(reportees, findAllReportingEmployees(val))
-	// }
 	return reportees
 }
 
