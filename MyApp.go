@@ -2,5 +2,6 @@ package main
 
 func main() {
 	//FindEmployees()
-	Sample1()
+	SortingOverChannel()
+	// Sample1()
 }
