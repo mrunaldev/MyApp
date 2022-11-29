@@ -2,6 +2,7 @@ package main
 
 func main() {
 	//FindEmployees()
-	SortingOverChannel()
-	// Sample1()
+	// SortingOverChannel()
+	// fmt.Println(Num)
+	PrintOddEvenInThread()
 }
